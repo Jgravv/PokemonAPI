@@ -46,6 +46,7 @@
     padding: 7px 10px;
     background-color:white;
     border-radius: 20px;
+    width: 30%;
 }
 
 .pokemon-search input {
@@ -62,6 +63,17 @@
 
 .pokemon-search input { 
     outline:none;
+}
+
+.pokemon-search button {
+    background-color: #FFC93C;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--pokemon-font);
+    font-size: 10px;
+    font-weight: bolder;
 }
 
 .pokemon-container {
@@ -263,3 +275,4 @@
    
 
 }
+
