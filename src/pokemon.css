@@ -1,6 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --pokemon-font: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.pokemon-container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #E8541E;
+    color: white;
+    font-family: var(--pokemon-font);
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.pokemon-container-header a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--pokemon-font);
+    font-weight: bold;
+    font-size: 8px;
+}
+
+.pokemon-container-back{
+    background-color:#FFC93C;
+    width: 80px;
+    height:25px;  
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.pokemon-container-back:hover {
+    background-color:#f0b318;
+}
+
+.pokemon-search {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    background-color:white;
+    border-radius: 20px;
+}
+
+.pokemon-search input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border:none;
+    background-color:white;
+    color: #1F1A17;
+    font-family: var(--pokemon-font);
+    font-size: 8px;
+}
+
+.pokemon-search input { 
+    outline:none;
+}
+
 .pokemon-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
     width: 100%;
@@ -10,7 +76,7 @@
 
 .pokemon-content {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
     width: 100%;
@@ -27,6 +93,7 @@
   border: 3px solid #D8381F;
   margin: 10px auto;
   box-sizing: border-box;
+  font-family: var(--pokemon-font);
 }
 
 .card-header{
@@ -39,6 +106,8 @@
 .header-number{
     color:white;
     font-weight:bolder;
+    font-size: 11px;
+    padding: 5px 8px;
 }
 
 .header-default{
@@ -48,6 +117,8 @@
     background-color:#FFC93C;
     padding: 5px 10px;
     border-radius:20px;
+    font-size: 7px;
+    align-items: center;
 }
 
 .card-color-header{
@@ -80,14 +151,14 @@
 
 .card-img {
     width: 100%;
-    height: 40%;
+    height: 35%;
     background-color: #1F1A17;
     border: 3px solid #FFC93C;
     border-radius: 10px;
     display:flex;
     justify-content: center;
     object-fit: contain;
-
+    align-items: center;
 }
 
 .card-img img {
@@ -95,7 +166,14 @@
 }
 
 .card-pokemon-name {
-    margin: -10px;
+    margin: 0px 10px 0;
+    color: #1F1A17;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.card-pokemon-name h2 {
+    line-height: 1.8;
 }
 .card-content-color{
   display:flex;
@@ -117,17 +195,18 @@
     display:flex;
     justify-content: space-between;
     width:95%;
-    margin: 5px 0px;
+    margin: 15px 0px;
     align-items: flex-end;
 }
 
 .card-properties .properties{
-    font-size: 10px;
+    font-size: 7px;
     color:grey
 }
 
 .properties-value{
-    font-size: 20px;
+    font-size: 14px;
+    color: #1F1A17;
 }
 
 .card-properties .properties-value .exp{
@@ -139,7 +218,6 @@
     display:flex;
     justify-content: space-between;
     width:95%;
-    margin: 5px 0px;
     align-items: flex-end;
 }
 
@@ -148,8 +226,8 @@
     border: solid 1px #F0D9C4;
     border-radius: 10px;
     width: 39%;
-    padding: 8px 10px;
-    font-size: 15px;
+    padding: 13px 10px;
+    font-size: 9px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -182,20 +260,6 @@
         grid-template-columns: 1fr;
     }
 
-    .card-content {
-        height: auto;
-    }
+   
 
-    .card-properties,
-    .card-footer {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-    }
-
-    .card-footer .card {
-        width: 100%;
-        box-sizing: border-box;
-    }
 }
-

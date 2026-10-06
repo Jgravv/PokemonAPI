@@ -44,7 +44,15 @@ export default function PokemonAPI() {
     }
     return(
         <>
-            <a href="/post">Post</a>
+      
+            <div className="pokemon-container-header">
+                <div className="pokemon-container-back">
+                <a href="/post"> &lt; POSTS</a>
+                </div>
+                <div className="pokemon-search">
+                    🔍<input type="text" />
+                </div>
+            </div>
                 <div className="pokemon-container">
                     <div className="pokemon-content">
                         {pokemon.map((pokemons)=> {
